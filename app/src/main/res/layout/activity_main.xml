@@ -6,13 +6,128 @@
     android:layout_height="match_parent"
     tools:context=".main_module.MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tfName"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
 
+        <EditText
+            android:id="@+id/editName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/editHintName"
+            android:inputType="text"
+            android:textAlignment="center"
+            android:textSize="20sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tfLastName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintEnd_toEndOf="@id/tfName"
+        app:layout_constraintStart_toStartOf="@id/tfName"
+        app:layout_constraintTop_toBottomOf="@id/tfName">
+
+        <EditText
+            android:id="@+id/editLastName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/editHintLastname"
+            android:inputType="text"
+            android:textAlignment="center"
+            android:textSize="20sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tfDateOfBirth"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintEnd_toEndOf="@id/tfLastName"
+        app:layout_constraintStart_toStartOf="@id/tfLastName"
+        app:layout_constraintTop_toBottomOf="@id/tfLastName">
+
+        <EditText
+            android:id="@+id/editDateOfBirth"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/editHintDateOfBirth"
+            android:inputType="text"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:clickable="false"
+            android:focusable="false"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tfCollege"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintEnd_toEndOf="@id/tfDateOfBirth"
+        app:layout_constraintStart_toStartOf="@id/tfDateOfBirth"
+        app:layout_constraintTop_toBottomOf="@id/tfDateOfBirth">
+
+        <EditText
+            android:id="@+id/editCollege"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/editHintCollege"
+            android:inputType="text"
+            android:textAlignment="center"
+            android:textSize="20sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tfObservations"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintEnd_toEndOf="@id/tfCollege"
+        app:layout_constraintStart_toStartOf="@id/tfCollege"
+        app:layout_constraintTop_toBottomOf="@id/tfCollege">
+
+        <EditText
+            android:id="@+id/editObservations"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/editHintObservations"
+            android:inputType="text"
+            android:textAlignment="center"
+            android:textSize="20sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/btnReset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="20dp"
+        android:text="@string/btnReset"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/btnFinish"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnFinish"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginBottom="20dp"
+        android:text="@string/btnFinish"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/btnReset" />
 </androidx.constraintlayout.widget.ConstraintLayout>

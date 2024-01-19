@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">FormApp</string>
+    <string name="editHintLastname">Apellido</string>
+    <string name="editHintName">Nombre</string>
+    <string name="editHintCollege">Colegio</string>
+    <string name="editHintObservations">Observaciones</string>
+    <string name="editHintDateOfBirth">Fecha de nacimiento</string>
+    <string name="btnReset">Reiniciar</string>
+    <string name="btnFinish">Finalizar</string>
 </resources>

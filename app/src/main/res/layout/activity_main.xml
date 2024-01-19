@@ -67,7 +67,9 @@
             android:textAlignment="center"
             android:textSize="20sp"
             android:inputType="text"
-            android:hint="@string/editHintDateOfBirth"/>
+            android:hint="@string/editHintDateOfBirth"
+            android:clickable="false"
+            android:focusable="false"/>
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -79,7 +81,8 @@
         app:layout_constraintStart_toStartOf="@id/tfDateOfBirth"
         app:layout_constraintEnd_toEndOf="@id/tfDateOfBirth"
         android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp">
+        android:layout_marginEnd="20dp"
+        android:visibility="gone">
 
         <EditText
             android:id="@+id/editCollege"
@@ -100,7 +103,8 @@
         app:layout_constraintStart_toStartOf="@id/tfCollege"
         app:layout_constraintEnd_toEndOf="@id/tfCollege"
         android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp">
+        android:layout_marginEnd="20dp"
+        android:visibility="gone">
 
         <EditText
             android:id="@+id/editObservations"

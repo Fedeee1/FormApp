@@ -18,13 +18,32 @@ en ios al crear el proyecto te dice si quereis crearlo, decis que si y lo hace
 en android imagino que tambien, si no, desde el terminal y en la carpeta donde creeis el proyecto haceis git init
  */
 
+import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.formapp.R
+import android.view.inputmethod.InputMethodManager
+import com.example.formapp.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
+
+    private lateinit var binding: ActivityMainBinding
+    private var mainViewModel = MainViewModel()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
+        binding.editDateOfBirth.setOnClickListener{
+            mainViewModel.selectDateOfBirth(supportFragmentManager ,binding.editDateOfBirth)
+        }
+        mainViewModel.currentEditText(binding.editDateOfBirth,binding.tfCollege)
+        mainViewModel.currentEditText(binding.editDateOfBirth,binding.tfObservations)
+
+        hideKeyboard()
     }
+    private fun hideKeyboard() {
+        var imm = this.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+        imm.hideSoftInputFromWindow(currentFocus?.windowToken, 0)
+    }
+
 }

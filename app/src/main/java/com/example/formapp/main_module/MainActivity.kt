@@ -6,6 +6,7 @@ si es menor de edad, habra otro campo para introducir el nombre del colegio que 
 y otro campo mas donde se ponen observaciones
 ademas, cuando se escribe el nombre y se pulsa el enter del teclado, se asume que ha terminado y debera poner el cursor en el
 siguiente campo.
+
 Por supuesto si pulso sobre la pantalla se ha de ocultar el teclado
 una vez que se termine de rellenar todos los campos, el de observaciones es opcional y el del colegio es obligatorio en el caso
 de ser menor de edad,
